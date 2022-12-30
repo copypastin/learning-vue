@@ -1,0 +1,37 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.header1 {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: 29px;
+    font-family:'Courier New', Courier, monospace;
+    animation-name: header1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.header2{
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+.result {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+.background {
+    background-color: rgb(36, 36, 36);
+}
+.swagCat {
+    height: 80px;
+    width: 1000px;
+}
+.anInput {
+    -webkit-text-fill-color: black;
+}

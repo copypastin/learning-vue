@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<link rel="stylesheet" href="src/style.css">
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>obama land</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <title>Hello World</title>
+
+</head>
+
+<body class='background'>
+    <h1>
+        <center>
+
+            <div id="header" ; class='header1'>
+                {{ greeting }}
+            </div>
+
+            <div>
+                <img src="src/imgs/swagcat2.jpg" alt="swag" class="swagCat">
+            </div>
+        </center>
+    </h1>
+
+    <script>
+        let header = Vue.createApp({
+            data: function () {
+                return {
+                    greeting: "aaron website",
+                }
+            }
+        })
+        header.mount('#header')
+    </script>
+
+    <h2 id="input"; >
+        <div class="header2">
+            <input :value="text" @input="onInput" placeholder="put something cool">
+        </div>
+        <div class="result">
+            Result: {{text}}
+        </div>
+        
+    </h2>
+
+    <script>
+        let input = Vue.createApp({
+            data: function () {
+                return {
+                    text: "",
+                }
+            },
+            methods: {
+                onInput(e) {
+                    if (e.target.value === "bruh") {
+                        // console.log(e)
+                        this.text = "you found the secret"
+                        console.log(this)
+                    } else {
+                        this.text = ''
+                    }
+                }
+            }
+        })
+        input.mount('#input')
+    </script>
+
+    <h3>
+        <div class="box">
+            <style>
+                @keyframes example {
+                0%   {background-color:red; left:0px; top:0px;}
+                25%  {background-color:yellow; left:200px; top:0px;}
+                50%  {background-color:blue; left:200px; top:200px;}
+                75%  {background-color:green; left:0px; top:200px;}
+                100% {background-color:red; left:0px; top:0px;}
+              }
+            </style>
+            
+        </div>
+    </h3>
+
+</body>
+
 </html>
